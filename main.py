@@ -199,15 +199,12 @@ class req_selectOrder(BaseModel):
    
 @app.post("/get_Order")
 def add_data(req : req_selectOrder):
-  
-       
     try:
         
         data= qry.Select_tableOrder(req.status,req.symbol,req.orderby,req.limit)
         return json.loads(data)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
     
 
 # ทำการตั้งค่า
@@ -268,7 +265,7 @@ def update_settings(new_config: Config):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app,  port=8400)
+    uvicorn.run(app,  port=8401)
     
     
 # Run TEST

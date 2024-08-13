@@ -74,7 +74,7 @@ class OrderManager:
             # Check Sell
             OrderSell=[]
             OrderSell = json.loads(qury.Select_tableOrder(status,symbol,orderby,limit))
-      
+            
             
             if price <= next_Buy :
             #if True:
