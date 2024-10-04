@@ -267,6 +267,35 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app,  port=8401)
     
-    
+#*****************************************************************************************************
+# การทำงานของระบบ
+#*****************************************************************************************************
+# ======[API]========
+# 1. [POST] /start *กำหนดให้ซื้อขาย XRPUSDT in Function BotGrit_CheckPrice_Fast_API_FN_buy()
+# 2. [POST] /start2 *กำหนดให้ซื้อขาย BNBUSDT in Function BotGrit_CheckPrice_Fast_API_FN_buy()
+# 3. [POST] /st_all *กำหนดให้ซื้อขาย ทั้งหมด
+# 4. [POST] /stop
+# 5. [POST] /stop2
+# 6. [POST] /stop_all
+# 7. [GET]  /setting *เรียกดูค่า 
+# 8. [POST] /addData *Not Work
+# 9. [POST] /get_Order * ดู Data Order ส่ง "symbol": "XRPUSDT","BNBUSDT" กับ "status":0,1  | "orderby" : id, SYMBOL, PRICE_BUY, PRICE_SELL,QUANTITY, STATUS, DATE_BUY, DATE_SELL
+# 10. [POST] /setting *กำหนดค่า
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 # Run TEST
 # uvicorn BotGrit_CheckPrice_Fast_API:app --host 127.0.0.1 --port 8400 --log-level debug --reload

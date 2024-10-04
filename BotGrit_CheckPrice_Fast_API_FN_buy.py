@@ -35,8 +35,9 @@ class OrderManager:
             config = json.load(f)
         self.config = config
         
-        
+        # จะรันทุกการ ขยับของราคา
     def check_price_buy(self,pri,symbol):
+        print(symbol)
         try:
             priceActionLast = 999999999.99
             price = float(pri)
@@ -75,6 +76,7 @@ class OrderManager:
             OrderSell=[]
             OrderSell = json.loads(qury.Select_tableOrder(status,symbol,orderby,limit))
             
+            print("OrderSell" ,OrderSell)
             
             if price <= next_Buy :
             #if True:
@@ -97,7 +99,7 @@ class OrderManager:
           
            
             for item in OrderSell:
-                
+                print(item)
                 #print( "price >= price_sell" , price,'>=', item['price_sell'],price >= float(item['price_sell']))
                 if price >= float(item['price_sell']) :
                     print("Action SELL")
